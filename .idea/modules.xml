@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ContentProviderServer/ContentProviderServer.iml" filepath="$PROJECT_DIR$/ContentProviderServer/ContentProviderServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ContentProviderTest/ContentProviderTest.iml" filepath="$PROJECT_DIR$/ContentProviderTest/ContentProviderTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dome.iml" filepath="$PROJECT_DIR$/Dome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Plugin/Plugin.iml" filepath="$PROJECT_DIR$/Plugin/Plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginHost/PluginHost.iml" filepath="$PROJECT_DIR$/PluginHost/PluginHost.iml" />
     </modules>
   </component>
 </project>
