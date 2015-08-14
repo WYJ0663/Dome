@@ -1,51 +1,88 @@
 package com.example.Plugin;
 
 import android.app.Activity;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.ViewGroup;
-import android.widget.Button;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.lang.reflect.Method;
 
 public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        //      setContentView(R.layout.main);
 
-        Button button = new Button(this);
-        button.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT));
-        button.setBackgroundColor(Color.YELLOW);
-        button.setText("这是测试页面");
-        setContentView(button);
-
+    public String sayHello() {
+        return "Hello, this apk is not installed";
     }
 
-    Resources.Theme mTheme;
-    String mDexPath;
-    AssetManager mAssetManager;
-    Resources mResources;
 
-    protected void loadResources() {
-        try {
-            AssetManager assetManager = AssetManager.class.newInstance();
-            Method addAssetPath = assetManager.getClass().getMethod("addAssetPath", String.class);
-            addAssetPath.invoke(assetManager, mDexPath);
-            mAssetManager = assetManager;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Resources superRes = super.getResources();
-        mResources = new Resources(mAssetManager, superRes.getDisplayMetrics(),
-                superRes.getConfiguration());
-        mTheme = mResources.newTheme();
-        mTheme.setTo(super.getTheme());
+    private Activity otherActivity;
+
+    public void test() {
+        Log.i("sys", "测试方法执行了");
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        // 测试DexClassLoader 动态加载未安装Apk中的类
+        TextView t = new TextView(otherActivity);
+        t.setText("我是测试插件");
+        otherActivity.setContentView(t);// R.layout.frist_activity_main
+
+        t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(otherActivity, "点击插件", Toast.LENGTH_SHORT).show();
+            }
+        });
+        Log.i("sys", "Fragment项目启动了");
+    }
+
+    public void setActivity(Activity paramActivity) {
+        Log.d("sys", "setActivity...");
+        this.otherActivity = paramActivity;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("sys", "OnSaveInstance被调了");
+    }
+
+    @Override
+    public void onStart() {
+        Log.i("sys", "onStart被调了");
+        // TODO Auto-generated method stub
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        Log.i("sys", "onResume被调了");
+        // TODO Auto-generated method stub
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        Log.i("sys", "onPause被调了");
+        // TODO Auto-generated method stub
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        Log.i("sys", "onStop被调了");
+        // TODO Auto-generated method stub
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i("sys", "onDestroy被调了");
+        // TODO Auto-generated method stub
+        super.onDestroy();
     }
 }

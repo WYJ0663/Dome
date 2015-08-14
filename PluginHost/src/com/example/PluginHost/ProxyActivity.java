@@ -30,6 +30,8 @@ public class ProxyActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
         mDexPath = getIntent().getStringExtra(EXTRA_DEX_PATH);
         mClass = getIntent().getStringExtra(EXTRA_CLASS);
 

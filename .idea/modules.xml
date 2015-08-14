@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Dome.iml" filepath="$PROJECT_DIR$/Dome.iml" />
       <module fileurl="file://$PROJECT_DIR$/Plugin/Plugin.iml" filepath="$PROJECT_DIR$/Plugin/Plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/PluginHost/PluginHost.iml" filepath="$PROJECT_DIR$/PluginHost/PluginHost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginHoster/PluginHoster.iml" filepath="$PROJECT_DIR$/PluginHoster/PluginHoster.iml" />
     </modules>
   </component>
 </project>
