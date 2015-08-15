@@ -27,16 +27,18 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         // 测试DexClassLoader 动态加载未安装Apk中的类
-        TextView t = new TextView(otherActivity);
-        t.setText("我是测试插件");
-        otherActivity.setContentView(t);// R.layout.frist_activity_main
+//        TextView t = new TextView(otherActivity);
+//        t.setText("我是测试插件");
+//        otherActivity.setContentView(t);// R.layout.frist_activity_main
+//
+//        t.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(otherActivity, "点击插件", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
-        t.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(otherActivity, "点击插件", Toast.LENGTH_SHORT).show();
-            }
-        });
+        setContentView(R.layout.main);
         Log.i("sys", "Fragment项目启动了");
     }
 
@@ -55,34 +57,29 @@ public class MyActivity extends Activity {
     public void onStart() {
         Log.i("sys", "onStart被调了");
         // TODO Auto-generated method stub
-        super.onStart();
     }
 
     @Override
     public void onResume() {
         Log.i("sys", "onResume被调了");
         // TODO Auto-generated method stub
-        super.onResume();
     }
 
     @Override
     public void onPause() {
         Log.i("sys", "onPause被调了");
         // TODO Auto-generated method stub
-        super.onPause();
     }
 
     @Override
     public void onStop() {
         Log.i("sys", "onStop被调了");
         // TODO Auto-generated method stub
-        super.onStop();
     }
 
     @Override
     protected void onDestroy() {
         Log.i("sys", "onDestroy被调了");
         // TODO Auto-generated method stub
-        super.onDestroy();
     }
 }

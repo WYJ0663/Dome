@@ -5,9 +5,10 @@
               android:layout_height="fill_parent"
         >
     <TextView
+            android:id="@+id/y"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
+            android:text="Hello World, 我是插件"
             />
 </LinearLayout>
 

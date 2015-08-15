@@ -4,9 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ContentProviderServer/ContentProviderServer.iml" filepath="$PROJECT_DIR$/ContentProviderServer/ContentProviderServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ContentProviderTest/ContentProviderTest.iml" filepath="$PROJECT_DIR$/ContentProviderTest/ContentProviderTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DialogFragment/DialogFragment.iml" filepath="$PROJECT_DIR$/DialogFragment/DialogFragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dome.iml" filepath="$PROJECT_DIR$/Dome.iml" />
       <module fileurl="file://$PROJECT_DIR$/Plugin/Plugin.iml" filepath="$PROJECT_DIR$/Plugin/Plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginFragment/PluginFragment.iml" filepath="$PROJECT_DIR$/PluginFragment/PluginFragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/PluginHost/PluginHost.iml" filepath="$PROJECT_DIR$/PluginHost/PluginHost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginHostFragment/PluginHostFragment.iml" filepath="$PROJECT_DIR$/PluginHostFragment/PluginHostFragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginHostInstall/PluginHostInstall.iml" filepath="$PROJECT_DIR$/PluginHostInstall/PluginHostInstall.iml" />
       <module fileurl="file://$PROJECT_DIR$/PluginHoster/PluginHoster.iml" filepath="$PROJECT_DIR$/PluginHoster/PluginHoster.iml" />
     </modules>
   </component>
